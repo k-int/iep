@@ -25,6 +25,14 @@ public class NimbleSecurityFilters extends grails.plugins.nimble.security.Nimble
 
     def filters = {
 
+        secure(controller: "home") {
+            before = {
+                accessControl {
+                    true
+                }
+            }
+        }
+
         // Content requiring users to be authenticated
         secure(controller: "main") {
             before = {

@@ -6,9 +6,12 @@ import com.k_int.iep.datamodel.*
 class HomeController {
 
     def index = { 
+      def result = [:]
       println "Home"
       // def subject = SecurityUtils.getSubject()
       // println "Hello ${subject.principal} - auth? ${subject.authenticated} - injected: ${authenticatedUser}"
       println "User: ${authenticatedUser.username}"
+      result.user = authenticatedUser
+      result
     }
 }

@@ -32,7 +32,7 @@ nimble {
 	layout {
         application = 'app'
         administration = 'admin'
-		login = 'app'
+	login = 'app'
     }
 
     resources {

@@ -10,11 +10,11 @@
     <!-- Include the main layout from the grails-app/views/layouts dir - Thats where are the styles etc are imported -->
     <meta name="layout" content="searchresultsmain" />
 
-    <title><g:message code="ofs.search.title"/></title>
+    <title><g:message code="iep.app.abouttitle"/></title>
   </head>
   <body class="search-results">
 <ul>
-<li>OFS End User App : ${grailsApplication.metadata['app.version']} (Build #${grailsApplication.metadata['app.buildNumber']}</li>
+<li><g:message code="iep.app.name"/> : ${grailsApplication.metadata['app.version']} (Build #${grailsApplication.metadata['app.buildNumber']}</li>
 <li>Build Date: ${grailsApplication.metadata['app.buildDate']},</li>
 <li>Build Profile: ${grailsApplication.metadata['app.buildProfile']})</li>
 </ul>

@@ -13,19 +13,19 @@ hibernate {
 environments {
     development {
         dataSource {
-          driverClassName = "com.mysql.jdbc.Driver"
-          dbCreate =  "update" // "create-drop"           // "create"
-          username = "k-int"
-          password = "k-int"
-          url = "jdbc:mysql://localhost/FIDYDev?autoReconnect=true&amp;characterEncoding=utf8"
-          properties {
-            validationQuery="select 1"
-            testWhileIdle=true
-            timeBetweenEvictionRunsMillis=60000
-          }
+          // driverClassName = "com.mysql.jdbc.Driver"
+          // dbCreate =  "update" // "create-drop"           // "create"
+          // username = "k-int"
+          // password = "k-int"
+          // url = "jdbc:mysql://localhost/FIDYDev?autoReconnect=true&amp;characterEncoding=utf8"
+          // properties {
+          //   validationQuery="select 1"
+          //   testWhileIdle=true
+          //   timeBetweenEvictionRunsMillis=60000
+          // }
 
-          // dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-          // url = "jdbc:hsqldb:mem:devDB"
+          dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+          url = "jdbc:hsqldb:mem:devDB"
         }
     }
     test {

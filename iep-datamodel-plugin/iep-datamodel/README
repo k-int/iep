@@ -1,0 +1,5 @@
+Package the plugin using 
+
+grails package-plugin
+
+

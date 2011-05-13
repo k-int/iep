@@ -49,6 +49,5 @@ Brief description of the plugin.
     }
 
     // For the maven-publisher plugin
-    String groupId = 'com.k-int.ofs'
-    String version = '0.1'
+    def groupId = 'com.k-int.ofs'
 }

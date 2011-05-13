@@ -47,4 +47,8 @@ Brief description of the plugin.
         // TODO Implement code that is executed when the project configuration changes.
         // The event is the same as for 'onChange'.
     }
+
+    // For the maven-publisher plugin
+    String groupId = 'com.k-int.ofs'
+    String version = '0.1'
 }

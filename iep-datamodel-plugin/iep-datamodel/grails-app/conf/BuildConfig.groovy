@@ -29,4 +29,11 @@ grails.project.dependency.resolution = {
 
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
+
+    grails.project.dependency.distribution = {
+      localRepository = "${user.home}/.m2/repository"
+      remoteRepository(id:"k-int-releases", url:"http://projects.k-int.com:8081/nexus-webapp-1.4.0/content/repositories/releases") {
+        authentication username:"...", privateKey:"${userHome}/.ssh/id_dsa"
+      } 
+    }
 }

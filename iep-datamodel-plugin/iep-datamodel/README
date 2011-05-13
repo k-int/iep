@@ -2,4 +2,6 @@ Package the plugin using
 
 grails package-plugin
 
+grails maven-deploy --repository=k-int-releases --protocol=webdav
+
 

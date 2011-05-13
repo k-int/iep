@@ -54,7 +54,7 @@ Brief description of the plugin.
     def license = "GNU AFFERO GENERAL PUBLIC LICENSE v3"
     def organization = [ name: "Knowledge Integration Ltd", url: "http://www.k-int.com/" ]
     def developers = [
-        [ name: "Ian Ibbotson", email: "ian.ibbotson@k-int.com" ],
+        [ name: "Ian Ibbotson", email: "ian.ibbotson@k-int.com" ] ]
     def issueManagement = [ system: "JIRA", url: "http://projects.k-int.com/jira" ]
     def scm = [ url: "https://github.com/k-int/iep" ]
 }

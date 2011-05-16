@@ -2,6 +2,7 @@ package com.k_int.iep.datamodel
 
 class IEPProvider {
 
+    String identifier
     String shortCode
     String name
     String office
@@ -17,7 +18,8 @@ class IEPProvider {
     String contactFax
 
     static constraints = {
-      shortCode(nullable:true,blank:true)
+      identifier(nullable:false,blank:false)
+      shortCode(nullable:false,blank:false)
       name(nullable:true,blank:true)
       office(nullable:true,blank:true)
       thoroughfare(nullable:true,blank:true)

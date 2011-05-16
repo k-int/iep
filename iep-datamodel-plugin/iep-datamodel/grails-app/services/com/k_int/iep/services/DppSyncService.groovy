@@ -1,6 +1,7 @@
 package com.k_int.iep.services
 
 import java.sql.*
+import com.k_int.iep.datamodel.*
 
 class DppSyncService {
 
@@ -24,7 +25,22 @@ class DppSyncService {
           ResultSet rs = stmt.getResultSet()
           rs.beforeFirst();
           while ( rs.next() )  {
-            println "Process entry ${rs.getString(1)} ${rs.getString(2)} ${rs.getString(3)} ${rs.getString(4)} ${rs.getString(5)} ${rs.getString(6)} ${rs.getString(7)} ${rs.getString(8)} ${rs.getString(9)}"
+            String short_code = rs.getString(9)
+            String identifier = rs.getString(6)
+            String name = rs.getString(7)
+            if ( ( short_code != null ) && ( identifier != null ) ) {
+              def provider = IEPProvider.findByShortCode(short_code)
+              if ( provider == null ) { 
+                println "Create record for ${name} - ${identifier} / ${short_code}"
+                provider = new IEPProvider(identifier:identifier, shortCode:short_code, name:name).save(flush:true)
+              }
+              else {
+                println "verified existing record - ${name} - ${identifier} / ${short_code}"
+              }            
+            }
+            else {
+              println "Unexpected problem, source record is missing short code. Id should be ${rs.getString(1)}"
+            }
           }
           println "Done"
           rs.close()

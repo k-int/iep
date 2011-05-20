@@ -10,6 +10,10 @@ class IEPResourceMessage {
     String remoteAddr
     String category
 
+    static mapping = {
+      message type:'text'
+    }
+
     static belongsTo = [owner : com.k_int.iep.datamodel.IEPResource]
 
     static constraints = {

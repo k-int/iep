@@ -3,11 +3,12 @@ package com.k_int.iep.datamodel
 class IEPResourceMessage {
 
     IEPResource owner
-    Date messageTimeStamp
+    java.sql.Timestamp messageTimeStamp
     String contactEmail
     String contactName
-    String contactTel
     String message
+    String remoteAddr
+    String category
 
     static belongsTo = [owner : com.k_int.iep.datamodel.IEPResource]
 

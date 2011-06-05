@@ -1,5 +1,8 @@
 package com.k_int.iep.datamodel
 
+/**
+ *  IEPProvider is a record authority / provider. an IEPProvider is an authoritative data source for a particualr set of records.
+ */
 class IEPProvider {
 
     String identifier

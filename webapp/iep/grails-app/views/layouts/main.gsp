@@ -19,7 +19,12 @@
         <div class="yui3-g" id="iepmainlayout">
 
           <div id="iepnav" class="yui3-u">
-            Navigation 
+<g:if test="${params.authority != null}">
+<b>${params.authority}</b><br/>
+Dashboard<br/>
+Search<br/>
+New FSD Record<br/>
+</g:if>
           </div>
 
           <div id="iepmain" class="yui3-u">

@@ -9,15 +9,30 @@ class AuthorityController {
     println "User: ${authenticatedUser.username}"
     result.user = authenticatedUser
 
+    // println "done"
+    result
+  }
 
-    println "Work out the authorities and records this user has been granted admin permission over."
-    result.userAuthorities = []
-    com.k_int.iep.datamodel.IEPProvider.findAll().each { prov ->
-      // println "Adding ${prov}"
-      result.userAuthorities.add(prov)
-    } 
+  def dashboard = { 
+    def result = [:]
+    println "Home"
+
+    println "User: ${authenticatedUser.username}"
+    result.user = authenticatedUser
 
     // println "done"
     result
   }
+
+  def records = { 
+    def result = [:]
+    println "Home"
+
+    println "User: ${authenticatedUser.username}"
+    result.user = authenticatedUser
+
+    // println "done"
+    result
+  }
+
 }

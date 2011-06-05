@@ -17,11 +17,11 @@ class HomeController {
       println "Work out the authorities and records this user has been granted admin permission over."
       result.userAuthorities = []
       com.k_int.iep.datamodel.IEPProvider.findAll().each { prov ->
-        println "Adding ${prov}"
+        // println "Adding ${prov}"
         result.userAuthorities.add(prov)
       } 
 
-      println "done"
+      // println "done"
       result
     }
 }

@@ -21,7 +21,7 @@
         YUI().use("datatable-scroll", function (Y) {
           var authdata= [
             <g:each status="s" in="${userAuthorities}" var="ua">
-              <g:if test="${s>0}">,</g:if>{ 'IC':'<a href="${ua.identifier}">${ua.identifier}</a>','SC':'${ua.shortCode}','NM':'${ua.name}' }
+              <g:if test="${s>0}">,</g:if>{ 'IC':'<a href="/iep/authority/${ua.identifier}">${ua.identifier}</a>','SC':'${ua.shortCode}','NM':'${ua.name}' }
             </g:each>
           ];
 

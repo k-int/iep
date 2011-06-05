@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
     <head>
         <title><g:layoutTitle default="Grails" /></title>
@@ -9,6 +9,24 @@
         <g:javascript library="application" />
     </head>
     <body>
-        <g:layoutBody />
+        <div id="header" class="yui3-g">
+          <div class="yui3-u" style="width:100%">
+            <div style="float:right;">Welcome back ${user.username}</div>
+            <div>Open Family Services - Information Management and Enhancement Portal</div>
+          </div>
+        </div>
+
+        <div class="yui3-g" id="mainlayout">
+          <div id="nav" class="yui3-u">
+            Navigation 
+          </div>
+
+          <div id="main" class="yui3-u">
+            <g:layoutBody />
+          </div>
+        </div>
+
+        <div id="footer" class="yui3-g">
+        </div>
     </body>
 </html>

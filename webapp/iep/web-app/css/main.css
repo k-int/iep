@@ -15,7 +15,28 @@ body {
     background: #fff;
     color: #333;
     font: 11px verdana, arial, helvetica, sans-serif;
+
+    /* margin: auto;
+    width: 960px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
 }
+
+#main {
+  width: 100%;
+}
+
+#nav {
+    margin-left:-100px; /* "left col" width */
+    width:300px;
+}
+
+#mainlayout {
+    padding-left:100px; /* "left col" width */ 
+    /* padding-right:150px; */ /* "right col" width */
+}
+
 #grailsLogo {
 	padding:20px;
 }

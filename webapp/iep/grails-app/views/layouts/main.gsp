@@ -19,6 +19,7 @@
         <div class="yui3-g" id="iepmainlayout">
 
           <div id="iepnav" class="yui3-u">
+
 <g:if test="${params.authority != null}">
 <b>${params.authority}</b><br/>
 Dashboard<br/>

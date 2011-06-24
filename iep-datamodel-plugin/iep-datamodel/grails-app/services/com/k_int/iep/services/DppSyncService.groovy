@@ -15,7 +15,10 @@ class DppSyncService {
                     String jdbc_connect_string,
                     String user,
                     String pass) {
+
+      println "DPP Sync Service 24062011"
       println "Attempt direct MySQL connection with ${jdbc_connect_string}"
+
       try {
         Class.forName(driver);
         Connection con = DriverManager.getConnection(jdbc_connect_string,user,pass);

@@ -9,7 +9,7 @@
     <body>
 
       <g:if test="${userAuthorities.size() > 0}">
-        <h2>Record Authorities You Administer</h2>
+        <h2>Record Authorities You Manage</h2>
         <div id="authdatatable"></div>
       </g:if>
 

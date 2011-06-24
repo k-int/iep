@@ -3,3 +3,22 @@ Had to rerun this once, not sure why
 grails install-plugin mail 0.9 
 
 grails package-plugin to build and install plugin
+
+
+Example iep-config.groovy
+
+iep {
+  dpp {
+    sync_contexts {
+      live {
+        appname="OFS Test"
+        jdbc_driver="com.mysql.jdbc.Driver"
+        connect_string="...."
+        user="...."
+        pass="...."
+      }
+    }
+    apikey='....'
+  }
+}
+

@@ -29,8 +29,9 @@ class IEPProvider {
     // Allow the provider to customise their own disclaimer message.
     String sourceDisclaimer
     String iconURL
-    Date dateCreated
-    Date lastUpdated
+
+    // Date dateCreated
+    // Date lastUpdated
 
  
 
@@ -53,8 +54,8 @@ class IEPProvider {
       showLogo(nullable:true,blank:true)
       sourceDisclaimer(nullable:true,blank:true)
       iconURL(nullable:true,blank:true)
-      dateCreated(nullable:true,blank:true)
-      lastUpdated(nullable:true,blank:true)
+      // dateCreated(nullable:true,blank:true)
+      // lastUpdated(nullable:true,blank:true)
     }
 
 }

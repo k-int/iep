@@ -12,6 +12,7 @@ class UrlMappings {
                 "/authority/${authority}" (controller:"authority", action:"dashboard")
                 "/authority/${authority}/dashboard" (controller:"authority", action:"dashboard")
                 "/authority/${authority}/records" (controller:"authority", action:"records")
+                "/authority/${authority}/edit" (controller:"IEPProvider", action:"edit")
 
                 "/resource/$id" (controller:"resource", action:"index")
 

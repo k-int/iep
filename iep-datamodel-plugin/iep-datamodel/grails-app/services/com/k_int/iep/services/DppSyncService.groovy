@@ -25,14 +25,21 @@ class DppSyncService {
           ResultSet rs = stmt.getResultSet()
           rs.beforeFirst();
           while ( rs.next() )  {
-            String short_code = rs.getString(9)
+            String icon_url = rs.getString(5)
             String identifier = rs.getString(6)
             String name = rs.getString(7)
+            String email = rs.getString(2)
+            String short_code = rs.getString(9)
+
             if ( ( short_code != null ) && ( identifier != null ) ) {
               def provider = IEPProvider.findByShortCode(short_code)
               if ( provider == null ) { 
                 println "Create record for ${name} - ${identifier} / ${short_code}"
-                provider = new IEPProvider(identifier:identifier, shortCode:short_code, name:name).save(flush:true)
+                provider = new IEPProvider(identifier:identifier, 
+                                           shortCode:short_code, 
+                                           name:name,
+                                           email:email,
+                                           iconURL:icon_url).save(flush:true)
               }
               else {
                 println "verified existing record - ${name} - ${identifier} / ${short_code}"

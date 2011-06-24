@@ -8,6 +8,7 @@ class IEPProvider {
     String identifier
     String shortCode
     String name
+    String email
     String office
     String thoroughfare
     String dependentThoroughfare
@@ -19,6 +20,19 @@ class IEPProvider {
     String contactEmail
     String contactTelephone
     String contactFax
+    // Is this provider just a placeholder, or an active user.
+    String subscriptionType
+
+    // Some data providers do not wish to have their logo shown
+    boolean showLogo
+
+    // Allow the provider to customise their own disclaimer message.
+    String sourceDisclaimer
+    String iconURL
+    Date dateCreated
+    Date lastUpdated
+
+ 
 
     static constraints = {
       identifier(nullable:false,blank:false)
@@ -35,6 +49,12 @@ class IEPProvider {
       contactEmail(nullable:true,blank:true)
       contactTelephone(nullable:true,blank:true)
       contactFax(nullable:true,blank:true)
+      subscriptionType(nullable:true,blank:true)
+      showLogo(nullable:true,blank:true)
+      sourceDisclaimer(nullable:true,blank:true)
+      iconURL(nullable:true,blank:true)
+      dateCreated(nullable:true,blank:true)
+      lastUpdated(nullable:true,blank:true)
     }
 
 }

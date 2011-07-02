@@ -3,9 +3,11 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
+// grails.project.plugins.dir="./plugins"
+
 // Local plugins to include
 grails.plugin.location.'iep-datamodel'='../iep-datamodel-plugin/iep-datamodel'
-grails.plugin.location.'SIPlugin'='../../SemanticInformationManager/SIPPlugin'
+grails.plugin.location.'sip'='../../SemanticInformationManager/sip'
 
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies

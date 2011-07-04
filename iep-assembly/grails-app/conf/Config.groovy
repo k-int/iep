@@ -70,9 +70,9 @@ log4j = {
     // Example of changing the log pattern for the default console
     // appender:
     //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+    // appenders {
+    //     console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n'), threshold: org.apache.log4j.Level.DEBUG
+    // }
 
     error  'org.codehaus.groovy.grails.web.sitemesh', //  layouts
            'org.codehaus.groovy.grails.commons', // core / classloading
@@ -86,5 +86,8 @@ log4j = {
            'org.codehaus.groovy.grails.web.servlet',
            'org.codehaus.groovy.grails.web.pages'
 
+    debug  'com.k_int'
+
     warn   'org.mortbay.log'
+
 }

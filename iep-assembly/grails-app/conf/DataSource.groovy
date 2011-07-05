@@ -13,8 +13,18 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
+            // dbCreate = "create-drop" // one of 'create', 'create-drop','update'
+            // url = "jdbc:hsqldb:mem:devDB"            // url = "jdbc:hsqldb:mem:devDB"
+            driverClassName = "com.mysql.jdbc.Driver"
+            dbCreate =  "create-drop" // "create-drop"           // "create" // "update"
+            username = "k-int"
+            password = "k-int"
+            url = "jdbc:mysql://localhost/iepdev?autoReconnect=true&amp;characterEncoding=utf8"
+            properties {
+                validationQuery="select 1"
+                testWhileIdle=true
+                timeBetweenEvictionRunsMillis=60000
+            }
         }
     }
     test {

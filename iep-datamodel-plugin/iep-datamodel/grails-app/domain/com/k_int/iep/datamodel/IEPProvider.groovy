@@ -24,7 +24,7 @@ class IEPProvider {
     String subscriptionType
 
     // Some data providers do not wish to have their logo shown
-    boolean showLogo
+    Boolean showLogo
 
     // Allow the provider to customise their own disclaimer message.
     String sourceDisclaimer

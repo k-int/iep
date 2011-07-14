@@ -67,12 +67,23 @@ environments {
 
 // log4j configuration
 log4j = {
+    // Apparently, debug the log4j config...
+    debug = true
     // Example of changing the log pattern for the default console
     // appender:
     //
     // appenders {
     //     console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n'), threshold: org.apache.log4j.Level.DEBUG
     // }
+
+    // Debug everything - don't do this!
+    // root {
+    //   debug "stdout"
+    // }
+
+    appenders {
+        console name: "stdout", threshold: org.apache.log4j.Level.ALL
+    }
 
     error  'org.codehaus.groovy.grails.web.sitemesh', //  layouts
            'org.codehaus.groovy.grails.commons', // core / classloading
@@ -86,7 +97,10 @@ log4j = {
            'org.codehaus.groovy.grails.web.servlet',
            'org.codehaus.groovy.grails.web.pages'
 
-    debug  'com.k_int'
+    // debug  'grails.app'
+    debug  'grails.app.controller.com.k_int.sim',
+           'grails.app.service.com.k_int',
+           'grails.app.domain.com.k_int'
 
     warn   'org.mortbay.log'
 

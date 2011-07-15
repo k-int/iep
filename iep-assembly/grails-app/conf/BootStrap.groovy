@@ -5,6 +5,7 @@ import grails.plugins.nimble.core.Role
 import grails.plugins.nimble.core.Group
 import grails.plugins.nimble.core.AdminsService
 import grails.plugins.nimble.core.UserService
+import com.k_int.iep.datamodel.*;
 
 class BootStrap {
 
@@ -55,6 +56,8 @@ class BootStrap {
     println "BootStrap"
     ontologyService.sync();
 
+    // Create some test data, only for testing
+    IEPProvider t1 = IEPProvider.findByIdentifier("test1") ?: new IEPProvider(identifier:"test1",shortCode:"test1",email:"a@b.c.d").save(flush:true);
   }
 
   def destroy = {

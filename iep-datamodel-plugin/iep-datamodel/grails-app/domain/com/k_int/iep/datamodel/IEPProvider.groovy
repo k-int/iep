@@ -20,8 +20,8 @@ class IEPProvider {
     String contactEmail
     String contactTelephone
     String contactFax
-    // Is this provider just a placeholder, or an active user.
-    String subscriptionType
+
+    IEPSubscriptionType subscriptionType
 
     // Some data providers do not wish to have their logo shown
     Boolean showLogo

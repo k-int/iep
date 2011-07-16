@@ -58,6 +58,10 @@ class BootStrap {
 
     // Create some test data, only for testing
     IEPProvider t1 = IEPProvider.findByIdentifier("test1") ?: new IEPProvider(identifier:"test1",shortCode:"test1",email:"a@b.c.d").save(flush:true);
+
+    IEPSubscriptionType none = IEPSubscriptionType.findByCode('none') ?: new IEPSubscriptionType(code:'none',description:'None').save(flush:true);
+    IEPSubscriptionType basic = IEPSubscriptionType.findByCode('basic') ?: new IEPSubscriptionType(code:'basic',description:'Basic').save(flush:true);
+    IEPSubscriptionType pro = IEPSubscriptionType.findByCode('pro') ?: new IEPSubscriptionType(code:'pro',description:'Professional').save(flush:true);
   }
 
   def destroy = {

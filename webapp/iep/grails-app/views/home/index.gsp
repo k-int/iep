@@ -13,10 +13,6 @@
         <div id="authdatatable"></div>
       </g:if>
 
-      <div style="margin-top:15px;">
-         <h2>Individual records you have adopted</h2>
-      </div>
-
       <script language="JavaScript">
         YUI().use("datatable-scroll", function (Y) {
           var authdata= [

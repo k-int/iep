@@ -23,7 +23,7 @@
 <g:if test="${params.authority != null}">
 <b>${params.authority}</b><br/>
 <g:link controller="authority" action="dashboard" params="${[authority:params.authority]}">Dashboard</g:link><br/>
-<g:link controller="authority" action="edit" params="${[authority:params.authority]}">Edit Details</g:link><br/>
+<g:link controller="IEPProvider" action="edit" params="${[authority:params.authority]}">Edit Details</g:link><br/>
 <g:link controller="authority" action="records" params="${[authority:params.authority]}">Records</g:link><br/>
 <g:link controller="authority" action="users" params="${[authority:params.authority]}">Users</g:link><br/>
 </g:if>

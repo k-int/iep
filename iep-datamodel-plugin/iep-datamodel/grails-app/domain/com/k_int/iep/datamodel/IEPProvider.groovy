@@ -33,6 +33,11 @@ class IEPProvider {
     // Date dateCreated
     // Date lastUpdated
 
+    List users
+    static hasMany = [
+      users:grails.plugins.nimble.core.UserBase
+    ]
+
  
 
     static constraints = {

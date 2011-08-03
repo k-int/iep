@@ -7,6 +7,11 @@ class IEPResource {
 
     static belongsTo = [owner : com.k_int.iep.datamodel.IEPProvider]
 
+    List users
+    static hasMany = [
+      users:grails.plugins.nimble.core.UserBase
+    ]
+
 
     static constraints = {
     }

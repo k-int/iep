@@ -1,5 +1,7 @@
 package com.k_int.iep.datamodel
 
+// import grails.plugins.nimble.core.UserBase
+
 /**
  *  IEPProvider is a record authority / provider. an IEPProvider is an authoritative data source for a particualr set of records.
  */
@@ -33,10 +35,10 @@ class IEPProvider {
     // Date dateCreated
     // Date lastUpdated
 
-    List users
-    static hasMany = [
-      users:grails.plugins.nimble.core.UserBase
-    ]
+    // List users
+    // static hasMany = [
+    //   users: UserBase
+    // ]
 
  
 

@@ -9,6 +9,7 @@ class IEPResourceMessage {
     String message
     String remoteAddr
     String category
+    String status="open"
 
     static mapping = {
       message type:'text'
@@ -17,5 +18,6 @@ class IEPResourceMessage {
     static belongsTo = [owner : com.k_int.iep.datamodel.IEPResource]
 
     static constraints = {
+      status(nullable:true, blank:false)
     }
 }

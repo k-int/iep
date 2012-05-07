@@ -22,6 +22,7 @@ class IEPProvider {
     String contactEmail
     String contactTelephone
     String contactFax
+    String website
 
     IEPSubscriptionType subscriptionType
 
@@ -57,6 +58,7 @@ class IEPProvider {
       contactEmail(nullable:true,blank:true)
       contactTelephone(nullable:true,blank:true)
       contactFax(nullable:true,blank:true)
+      website(nullable:true,blank:true)
       subscriptionType(nullable:true,blank:true)
       showLogo(nullable:true,blank:true)
       sourceDisclaimer(nullable:true,blank:true)

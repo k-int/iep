@@ -33,16 +33,6 @@ class IEPProvider {
     String sourceDisclaimer
     String iconURL
 
-    // Date dateCreated
-    // Date lastUpdated
-
-    // List users
-    // static hasMany = [
-    //   users: UserBase
-    // ]
-
- 
-
     static constraints = {
       identifier(nullable:false,blank:false)
       shortCode(nullable:false,blank:false)

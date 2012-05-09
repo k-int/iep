@@ -21,8 +21,10 @@ class RefdataValue {
     sortkey(nullable:true, blank:true)
   }
 
-  static String lookupOrCreateRefData(String category,  String value) {
+  static RefdataValue lookupOrCreateRefData(String category,  String value) {
     RefdataCategory cat = RefdataCategory.findByCode(category) ?: new RefdataCategory(code:category, desc:category).save()
-    RefdataValue.findByOwnerAndValue(cat, value) ?: new RefdataValue(owner:cat, value:value, sortkey: value).save();
+    def result = RefdataValue.findByOwnerAndValue(cat, value) ?: new RefdataValue(owner:cat, value:value, sortkey: value).save();
+
+    result
   }
 }

@@ -12,5 +12,6 @@ class RefdataCategory {
   }
 
   static constraints = {
+    desc(nullable:true, blank:true)
   }
 }

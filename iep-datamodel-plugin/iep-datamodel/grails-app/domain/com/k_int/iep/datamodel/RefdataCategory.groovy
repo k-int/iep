@@ -2,6 +2,7 @@ package com.k_int.iep.datamodel
 
 class RefdataCategory {
 
+  String code
   String desc
 
   static mapping = {

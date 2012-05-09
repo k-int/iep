@@ -11,6 +11,7 @@ class IEPProvider {
     String shortCode
     String name
     String email
+    String website
     String office
     String thoroughfare
     String dependentThoroughfare
@@ -22,7 +23,6 @@ class IEPProvider {
     String contactEmail
     String contactTelephone
     String contactFax
-    String website
 
     IEPSubscriptionType subscriptionType
 
